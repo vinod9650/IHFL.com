@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers at IHFL IT SERVICES LTD.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Global Styles (copied from your existing files for consistency) */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #1f2e3d;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    .logo-container h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: normal;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav ul li a.active {
+      background: #113c5c;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #0a2540;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #00b0ff;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: #1f2e3d;
+      font-size: 16px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+      list-style: disc;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #1f2e3d;
+    }
+
+    ul li strong {
+      color: #0a2540;
+    }
+
+    footer {
+      background: #0a2540;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .copyright-text {
+      color: cyan; /* Consistent copyright text color */
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+      color: #00b0ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #008cff;
+      text-decoration: none;
+    }
+
+    /* Careers Page Specific Styles */
+    .hero-careers {
+      background:  #007bff;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .hero-careers::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    }
+
+    .hero-careers h1 {
+      color: white;
+      z-index: 1;
+      font-size: 40px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .section-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .highlight-box {
+      background-color: #e3f2fd;
+      border-left: 5px solid #00b0ff;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .job-openings-link {
+      display: inline-block;
+      background-color: #00b0ff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .job-openings-link:hover {
+      background-color: #008cff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin-left: 0;
+      }
+      .container {
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .hero-careers h1 {
+        font-size: 32px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-top: 25px;
+      }
+      .section-image {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="IHFL Logo">
+      <h2>IHFL IT SERVICES LTD.</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="Careers.html" class="active">Careers</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-careers">
+    <h1>Careers at IHFL IT SERVICES LTD.</h1>
+  </section>
+
+  <div class="container">
+    <h2>Join Our Innovative Team</h2>
+    <p>At IHFL IT Services LTD., we're more than just a company; we're a community of innovators, problem-solvers, and passionate technologists. We believe in fostering a dynamic and inclusive environment where creativity thrives, skills are honed, and careers flourish. If you're looking for an opportunity to make a real impact, work on challenging projects, and grow with a forward-thinking organization, IHFL is the place for you.</p>
+
+    <img src="images/team_working.jpg" alt="Team working collaboratively" class="section-image">
+
+    <h3>Why Work With Us?</h3>
+    <ul>
+      <li><strong>Culture of Innovation:</strong> Be part of a team that embraces new ideas and pushes the boundaries of technology.</li>
+      <li><strong>Professional Growth:</strong> We invest in your development with continuous learning opportunities, training programs, and clear career paths.</li>
+      <li><strong>Collaborative Environment:</strong> Work alongside talented professionals who are eager to share knowledge and achieve collective success.</li>
+      <li><strong>Impactful Work:</strong> Contribute to projects that solve real-world problems for clients across diverse industries, from automotive to finance.</li>
+      <li><strong>Work-Life Balance:</strong> We promote a healthy balance between professional commitments and personal well-being.</li>
+      <li><strong>Diversity & Inclusion:</strong> We celebrate diversity and ensure an inclusive workplace where everyone feels valued and respected.</li>
+    </ul>
+
+    <img src="images/diverse_team.jpg" alt="Diverse team smiling" class="section-image">
+
+    <h3>Who We Look For:</h3>
+    <p>We are always on the lookout for bright, enthusiastic, and dedicated individuals who are eager to contribute their skills and learn new ones. Whether you're an experienced professional or a recent graduate, if you have a passion for technology, a drive for excellence, and a collaborative spirit, we encourage you to explore opportunities with us.</p>
+    <p>We typically seek expertise in areas such as:</p>
+    <ul>
+      <li>Full-stack Software Development (Java, Python, .NET, JavaScript frameworks)</li>
+      <li>Cloud Engineering (AWS, Azure, Google Cloud)</li>
+      <li>DevOps & CI/CD</li>
+      <li>Cybersecurity Analysts</li>
+      <li>Data Scientists & AI/ML Engineers</li>
+      <li>Automotive Software & Embedded Systems Engineers</li>
+      <li>UI/UX Designers</li>
+      <li>IT Consultants & Business Analysts</li>
+      <li>Quality Assurance & Testing</li>
+      <li>Project Management</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">
+        👉 Please check our <a href="openings.html" class="job-openings-link">Current Openings</a> section for the latest job opportunities.
+      </p>
+      <p style="font-size: 16px;">
+        If you're interested in being part of IHFL, kindly forward your resume to <a href="mailto:careers@iHFL.com">careers@iHFL.com</a>.
+      </p>
+    </div>
+
+    <img src="images/Modern Office.png" alt="Modern office space" class="section-image">
+
+    <p>Join IHFL IT Services LTD and embark on a rewarding career journey where your contributions are valued, and your potential is limitless. We look forward to welcoming you to our team!</p>
+  </div>
+
+  <footer class="footer">
+    <p class="copyright-text">&copy; 2025 IHFL IT SERVICES LTD. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>

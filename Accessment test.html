@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHFL IT SERVICES LTD. - Candidate Assessment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #1f2e3d;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background: #0a2540;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .container {
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 5px;
+            margin: 40px auto;
+            max-width: 800px;
+            background: white;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00b0ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #007bb5;
+        }
+
+        .terms-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px 0;
+            max-height: 200px;
+            overflow-y: scroll;
+        }
+
+        .payment-section {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .payment-option {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option:hover {
+            background-color: #f0f0f0;
+            border-color: #00b0ff;
+        }
+
+        .payment-option.active {
+            background-color: #e3f2fd;
+            border-color: #00b0ff;
+        }
+
+        .checkbox-label {
+            display: block;
+            margin: 15px 0;
+        }
+
+        .footer {
+            background: #0a2540;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #90caf9;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+   <div style="display: flex; align-items: center; gap: 10px;">
+  <img src="images/logo.png" alt="IHFL Logo" style="height: 40px;">
+  <h1 style="margin: 0; color: #00b0ff;">IHFL IT SERVICES LTD.</h1>
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="Careers.html">Careers</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Welcome to the Assessment Test</h1>
+        <p>Dear Candidate,</p>
+        <p>Congratulations! Your profile has been shortlisted for the next round of our hiring process.</p>
+        
+        <div id="terms-section">
+            <h2>Terms and Conditions</h2>
+            <div class="terms-box">
+                <p>Please read the following terms and conditions carefully before proceeding with the assessment test:</p>
+                <ol>
+                    <li>The assessment test must be completed in one session without interruptions.</li>
+                    <li>You are required to complete the test without any external assistance.</li>
+                    <li>All answers provided must be your own original work.</li>
+                    <li>The time limit for the test is 60 minutes.</li>
+                    <li>Any attempt to cheat or use unauthorized resources will result in immediate disqualification.</li>
+                    <li>The test results will be used solely for the purpose of this hiring process.</li>
+                    <li>By proceeding, you agree to these terms and conditions.</li>
+                </ol>
+            </div>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="accept-terms"> I have read and accept the terms and conditions
+            </label>
+            
+            <button id="start-assessment" class="btn" disabled>Start Assessment Test</button>
+        </div>
+        
+        <div id="payment-section" class="payment-section">
+            <h2>Assessment Test Payment</h2>
+            <p>This assessment test includes a Background Verification (BGV) process conducted by our third-party verification partner.</p>
+            <p>The fee for this assessment and BGV process is <strong>₹685</strong>.</p>
+            <p>Please select your preferred payment method:</p>
+            
+            <div class="payment-option" id="upi-option">
+                <h3><i class="fas fa-mobile-alt" style="margin-right: 10px;"></i> UPI Payment</h3>
+                <p>Pay using any UPI app like Google Pay, PhonePe, Paytm, etc.</p>
+            </div>
+            
+            <div class="payment-option" id="card-option">
+                <h3><i class="far fa-credit-card" style="margin-right: 10px;"></i> Credit/Debit Card</h3>
+                <p>Pay using your credit or debit card</p>
+                <div id="card-details" style="display: none; margin-top: 10px;">
+                    <form id="card-payment">
+                        <div style="margin-bottom: 10px;">
+                            <label>Card Number:</label><br>
+                            <input type="text" placeholder="1234 5678 9012 3456" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <label>Expiry Date:</label><br>
+                            <input type="text" placeholder="MM/YY" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <label>CVV:</label><br>
+                            <input type="text" placeholder="123" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <label>Name on Card:</label><br>
+                            <input type="text" placeholder="John Doe" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <button type="submit" class="btn">Pay ₹685</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 IHFL IT SERVICES LTD. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <script>
+        // Enable Start Assessment button when terms are accepted
+        document.getElementById('accept-terms').addEventListener('change', function() {
+            document.getElementById('start-assessment').disabled = !this.checked;
+        });
+        
+        // Show payment section when Start Assessment is clicked
+        document.getElementById('start-assessment').addEventListener('click', function() {
+            document.getElementById('terms-section').style.display = 'none';
+            document.getElementById('payment-section').style.display = 'block';
+        });
+        
+        // Handle payment option selection
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove active class from all options
+                paymentOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // Add active class to clicked option
+                this.classList.add('active');
+                
+                // Handle UPI option
+                if (this.id === 'upi-option') {
+                    // Redirect to UPI payment page (simulated here)
+                    window.location.href = "upi-payment.html?amount=685&description=Assessment%20Test%20Fee";
+                }
+                
+                // Handle Card option
+                if (this.id === 'card-option') {
+                    document.getElementById('card-details').style.display = 'block';
+                } else {
+                    document.getElementById('card-details').style.display = 'none';
+                }
+            });
+        });
+        
+        // Handle Card payment submission
+        document.getElementById('card-payment').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Payment successful! You will now be redirected to the assessment test.');
+            // Here you would redirect to the actual test
+            // window.location.href = "assessment-test.html";
+        });
+    </script>
+</body>
+</html>

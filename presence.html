@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Global Presence - IHFL IT SERVICES LTD.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif; /* Retained user's preferred font */
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #1f2e3d;
+      line-height: 1.6; /* Added for better readability */
+    }
+    header {
+      background-color: #0a2540;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap; /* Added for responsiveness */
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    .back-to-home {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .back-to-home:hover {
+      background: white;
+      color: #0a2540;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a2540;
+    }
+    .map-container { /* Retained from user's original, but will be replaced by location-grid */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .office-card { /* Retained from user's original, but will be replaced by location-grid */
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      flex: 1 1 300px;
+    }
+    .office-img { /* Retained from user's original, but will be replaced by location-grid */
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .office-details { /* Retained from user's original, but will be replaced by location-grid */
+      padding: 20px;
+    }
+    .office-details h3 { /* Retained from user's original, but will be replaced by location-grid */
+      color: #00b0ff;
+      margin-top: 0;
+    }
+    .world-map {
+      width: 100%;
+      margin: 30px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Styles for new content and LLM feature */
+    .content-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 30px; /* Increased margin for better separation */
+      flex-wrap: wrap;
+      padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    .content-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .content-block img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .content-text h2 {
+      color: #0a2540;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .content-text p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    .location-card {
+      background-color: #f9fafc;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .location-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .location-card i {
+      font-size: 40px;
+      color: #00b0ff;
+      margin-bottom: 15px;
+    }
+
+    .location-card h3 {
+      color: #0a2540;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .location-card p {
+      color: #777;
+      font-size: 15px;
+    }
+
+    .location-card button {
+      background-color: #00b0ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .location-card button:hover {
+      background-color: #008cff;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1001; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+      text-align: left;
+    }
+
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-content h3 {
+      color: #0a2540;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .modal-content p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .loading-indicator {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: #777;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      .back-to-home {
+        margin-top: 10px;
+      }
+      .content-block, .content-block.reverse {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .content-block img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+      }
+
+      .location-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+      }
+
+      .modal-content {
+        width: 95%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="IHFL Logo">
+      <h2>IHFL IT SERVICES LTD.</h2>
+    </div>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <div class="container">
+    <h1>🌍 Our Global Presence</h1>
+   
+    
+    <div class="content-block">
+      <div class="content-text">
+        <h2>Expanding Our Footprint Across Continents</h2>
+        <p>IHFL IT SERVICES LTD. is proud to serve clients and partners across the globe. Our strategic locations enable us to provide seamless support and deliver innovative solutions tailored to diverse market needs. We are continuously expanding our presence to reach new horizons and strengthen our commitment to global excellence.</p>
+        <p>Our team comprises diverse talents from various cultural backgrounds, enriching our ability to understand and cater to a worldwide clientele. We leverage our international network to stay at the forefront of technological advancements and deliver truly impactful results.</p>
+      </div>
+      <img src="images/world-map.png">
+    </div>
+
+    <div class="content-block reverse">
+      <div class="content-text">
+        <h2>Key Locations and Hubs</h2>
+        <p>From our headquarters to our regional offices, each IHFL hub is a center of innovation and client engagement. We have established strong operational bases in key technological and economic centers, ensuring we are always close to our clients and talent pools.</p>
+        <p>Each location is equipped with state-of-the-art infrastructure and a collaborative environment, fostering creativity and efficiency. Our presence is not just about physical locations; it's about building strong relationships and contributing to local economies and communities.</p>
+      </div>
+      <img src="images/Modern Office.png">
+    </div>
+
+    <h2>Our Offices Worldwide</h2>
+    <div class="location-grid">
+      <div class="location-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>North America</h3>
+        <p>New York, USA</p>
+        <p>Toronto, Canada</p>
+        <button onclick="getInsights('North America', 'New York, USA')">✨ Get Insights</button>
+      </div>
+      <div class="location-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Europe</h3>
+        <p>London, UK</p>
+        <p>Berlin, Germany</p>
+        <p>Paris, France</p>
+        <button onclick="getInsights('Europe', 'London, UK')">✨ Get Insights</button>
+      </div>
+      <div class="location-card">
+        <i class="fas fa fa-map-marker-alt"></i>
+        <h3>Asia</h3>
+        <p>Techpark, Hyderabad, Telangana</p>
+        <p>Bengaluru, India</p>
+        <p>Singapore</p>
+        <p>Tokyo, Japan</p>
+        <button onclick="getInsights('Asia', 'Hyderabad, India')">✨ Get Insights</button>
+      </div>
+      <div class="location-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Australia</h3>
+        <p>Sydney, Australia</p>
+        <button onclick="getInsights('Australia', 'Sydney, Australia')">✨ Get Insights</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 IHFL IT SERVICES LTD. All rights reserved.
+  </footer>
+
+  <!-- The Modal for LLM insights -->
+  <div id="insightsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
+      <div id="loadingIndicator" class="loading-indicator" style="display:none;">Generating insights...</div>
+    </div>
+  </div>
+
+  <script>
+    // Get the modal and its elements
+    const insightsModal = document.getElementById('insightsModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+
+    // Function to open the modal
+    function openModal() {
+      insightsModal.style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      insightsModal.style.display = 'none';
+      modalTitle.textContent = '';
+      modalContent.textContent = '';
+      loadingIndicator.style.display = 'none';
+    }
+
+    // Function to get insights using Gemini API
+    async function getInsights(region, city) {
+      openModal();
+      modalTitle.textContent = `Insights for ${city}`;
+      modalContent.textContent = ''; // Clear previous content
+      loadingIndicator.style.display = 'block'; // Show loading indicator
+
+      const prompt = `Provide a brief insight (2-3 sentences) about the IT industry, tech landscape, or market opportunities in ${city}, ${region}, relevant to a company like IHFL IT SERVICES LTD. Focus on key trends or advantages.`;
+
+      try {
+        let chatHistory = [];
+        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+        const payload = { contents: chatHistory };
+        const apiKey = ""; // Canvas will automatically provide the API key
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result.candidates && result.candidates.length > 0 &&
+            result.candidates[0].content && result.candidates[0].content.parts &&
+            result.candidates[0].content.parts.length > 0) {
+          const text = result.candidates[0].content.parts[0].text;
+          modalContent.textContent = text;
+        } else {
+          modalContent.textContent = "Failed to generate insights. Please try again.";
+        }
+      } catch (error) {
+        console.error("Error fetching insights:", error);
+        modalContent.textContent = "An error occurred while fetching insights. Please try again later.";
+      } finally {
+        loadingIndicator.style.display = 'none'; // Hide loading indicator
+      }
+    }
+
+    // Close the modal if the user clicks anywhere outside of it
+    window.onclick = function(event) {
+      if (event.target == insightsModal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>

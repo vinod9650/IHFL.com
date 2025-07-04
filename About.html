@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – IHFL IT SERVICES LTD.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Add styles for the full navigation menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background: #113c5c;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    nav ul ul li {
+      margin: 0;
+    }
+
+    /* Active navigation link styling (optional, but good for user experience) */
+    nav ul li a.active {
+        background: #113c5c; /* Highlight the current page */
+        border-radius: 5px;
+    }
+
+    /* Keep existing styles */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #1f2e3d;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    .logo-container h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: normal;
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #0a2540;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #00b0ff;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: #1f2e3d;
+        font-size: 16px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+      list-style: disc;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #1f2e3d;
+    }
+
+    ul li strong {
+        color: #0a2540;
+    }
+
+    footer {
+      background: #0a2540;
+      color: white; /* Base color is white */
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* --- NEW/MODIFIED STYLE FOR COPYRIGHT TEXT VISIBILITY (MORE AGGRESSIVE) --- */
+    footer p {
+      font-weight: 700; /* Bolder text */
+      font-size: 18px; /* Larger font size */
+      padding: 10px 0; /* More vertical padding */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow for better contrast */
+color: #CCCCCC;
+    }
+    /* --- END OF NEW/MODIFIED STYLE --- */
+
+    a {
+      color: #00b0ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #008cff;
+      text-decoration: none;
+    }
+
+    /* Styles for content blocks with images */
+    .content-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .content-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .content-block img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .content-text h3 {
+      margin-top: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+      .container {
+        margin: 20px auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-top: 25px;
+      }
+      p {
+          font-size: 16px;
+          margin-bottom: 10px;
+      }
+      ul {
+          margin-left: 15px;
+          margin-bottom: 10px;
+      }
+      ul li {
+          margin-bottom: 6px;
+      }
+      .content-block, .content-block.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      .content-block img {
+        max-width: 90%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      .content-text {
+          min-width: unset;
+      }
+      footer {
+          padding: 15px;
+          margin-top: 30px;
+      }
+
+      /* Responsive adjustments for navigation */
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin-left: 0;
+      }
+    }
+
+    /* --- ADDITIONAL STYLES FOR IMPROVED ABOUT US PAGE CONTENT (from previous turn) --- */
+
+    /* General text and spacing improvements */
+    body {
+      line-height: 1.7; /* Slightly increased for better readability */
+    }
+
+    .container {
+      border-radius: 12px; /* More rounded corners */
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Stronger, more subtle shadow */
+    }
+
+    h1 {
+      padding-bottom: 15px; /* More space below heading */
+    }
+
+    h2 {
+      padding-top: 20px; /* Space above h2 */
+      padding-bottom: 10px; /* Space below h2 */
+      font-size: 30px; /* Slightly larger for emphasis */
+    }
+
+    h3 {
+      padding-top: 15px; /* Space above h3 */
+      padding-bottom: 8px; /* Space below h3 */
+      font-size: 26px; /* Slightly larger for emphasis */
+      color: #0a2540; /* Ensure consistent heading color */
+    }
+
+    p {
+      margin-bottom: 18px; /* Increased margin for paragraphs */
+      font-size: 17px; /* Slightly larger text for readability */
+    }
+
+    ul li {
+      margin-bottom: 10px; /* Increased margin for list items */
+      font-size: 17px; /* Consistent font size with paragraphs */
+    }
+
+    /* Enhanced image container with subtle hover effect */
+    .content-block img {
+      transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+      border: 1px solid #e0e0e0; /* Subtle border */
+    }
+
+    .content-block img:hover {
+      transform: scale(1.02); /* Slightly zoom in on hover */
+    }
+
+    /* Improved spacing around content blocks */
+    .content-block {
+      margin-top: 40px;
+      margin-bottom: 50px;
+      align-items: center; /* Vertically align items in the middle for blocks with images */
+    }
+
+    .content-text {
+      padding: 10px 0; /* Add some vertical padding inside content-text */
+    }
+
+    /* Adjust the last paragraph before the footer to stand out less if it was blending */
+    .container > p:last-of-type {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #e3f2fd; /* Light blue background for emphasis */
+      border-radius: 8px;
+      font-style: italic;
+      color: #0a2540;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Specific style for the final call-to-action paragraph */
+    p[style="text-align: center; font-size: 16px; margin-top: 30px;"] {
+      font-size: 18px !important;
+      font-weight: 500;
+      color: #0a2540;
+      margin-top: 50px !important;
+    }
+
+
+    /* Small adjustment for the list item strong text */
+    ul li strong {
+      color: #0a2540; /* Ensure strong text is visible */
+    }
+
+    /* --- END OF ADDITIONAL STYLES (from previous turn) --- */
+
+
+    /* --- NEW/MODIFIED STYLES FOR IMAGE CENTERING (from previous turn) --- */
+    .content-block {
+      flex-direction: column; /* Stack image and text vertically */
+      align-items: center; /* Center items horizontally within the block */
+      text-align: center; /* Center text within content-text as well */
+    }
+
+    .content-block img {
+      margin: 0 auto 25px auto; /* Center image horizontally and add space below */
+    }
+
+    .content-text {
+      text-align: left; /* Keep text aligned left for readability once stacked */
+      padding: 0 15px; /* Add some horizontal padding for text */
+    }
+
+    /* Media query for smaller screens: ensure content blocks stack */
+    @media (max-width: 768px) {
+      .content-block, .content-block.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Centered text for mobile */
+      }
+      .content-text {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+      }
+    }
+    /* --- END OF NEW/MODIFIED STYLES --- */
+
+    /* --- NEW STYLES FOR INDUSTRIES SECTION --- */
+    .industries-section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+
+    .industries-section h2 {
+      color: #0a2540;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .industries-scroll-container {
+      overflow: hidden;
+      white-space: nowrap; /* Prevent images from wrapping */
+      padding: 20px 0;
+    }
+
+    .industries-scroll {
+      display: inline-block; /* Ensure inline layout for scrolling */
+      animation: scroll-industries var(--scroll-speed, 30s) linear infinite;
+      min-width: max-content; /* Ensure container expands to fit all content */
+    }
+
+    .industry-image {
+      height: var(--image-height, 80px); /* Default image height */
+      margin: 0 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex-shrink: 0; /* Prevent images from shrinking */
+    }
+
+    @keyframes scroll-industries {
+      0% {
+        transform: translateX(0%); /* Start visible immediately */
+      }
+      100% {
+        transform: translateX(-50%); /* Move half the total width for seamless loop */
+      }
+    }
+
+    .industry-content {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .industry-content h3 {
+      font-size: 24px;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .industry-content p {
+      font-size: 17px;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    /* --- END OF NEW STYLES --- */
+
+  </style>
+</head>
+<body>
+  <header>
+   <div class="logo-container">
+  <img src="images/logo.png" alt="IHFL Logo">
+  <h2>IHFL IT SERVICES LTD.</h2>
+</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li> <li><a href="services.html">Our Services</a>
+
+        <li><a href="products.html">Our Products</a></li>
+<li><a href="Careers.html">Careers</a></li>
+<li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+  <h2 style="text-align: center;">
+  <span style="background-color: #50C878; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+    Welcome to IHFL IT Services LTD — your trusted partner in innovative IT solutions.
+  </span>
+</h2>
+
+    <div class="industries-section">
+      <h2>About us & Industries We Empower</h2>
+      <div class="industries-scroll-container">
+        <div class="industries-scroll">
+          <img src="images/industry1.png" alt="Aerospace and Defense" class="industry-image">
+          <img src="images/industry2.png" alt="Automotive" class="industry-image">
+          <img src="images/industry3.png" alt="Healthcare" class="industry-image">
+          <img src="images/industry4.png" alt="Financial Services" class="industry-image">
+          <img src="images/industry5.png" alt="Manufacturing" class="industry-image">
+          <img src="images/industry6.png" alt="Retail" class="industry-image">
+          <img src="images/industry7.png" alt="Technology" class="industry-image">
+          <img src="images/industry8.png" alt="Telecommunications" class="industry-image">
+          <img src="images/industry9.png" alt="Travel and Hospitality" class="industry-image">
+          <img src="images/industry10.png" alt="Education" class="industry-image">
+          <img src="images/industry1.png" alt="Aerospace and Defense" class="industry-image">
+          <img src="images/industry2.png" alt="Automotive" class="industry-image">
+          <img src="images/industry3.png" alt="Healthcare" class="industry-image">
+          <img src="images/industry4.png" alt="Financial Services" class="industry-image">
+          <img src="images/industry5.png" alt="Manufacturing" class="industry-image">
+          <img src="images/industry6.png" alt="Retail" class="industry-image">
+          <img src="images/industry7.png" alt="Technology" class="industry-image">
+          <img src="images/industry8.png" alt="Telecommunications" class="industry-image">
+          <img src="images/industry9.png" alt="Travel and Hospitality" class="industry-image">
+          <img src="images/industry10.png" alt="Education" class="industry-image">
+        </div>
+      </div>
+
+      <div class="industry-content">
+        <h3>Aerospace and Defense</h3>
+        <p>We provide tailored IT solutions for the aerospace and defense sectors, focusing on secure data management, advanced analytics, and robust communication systems to meet stringent industry regulations and mission-critical requirements.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Automotive</h3>
+        <p>Our expertise in the automotive industry helps drive innovation through connected car technologies, IoT solutions for manufacturing, and data analytics for improved efficiency and customer experiences. Based in Kothagudem, Telangana, India, we understand the specific needs of this region's automotive sector.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Healthcare</h3>
+        <p>We deliver HIPAA-compliant IT solutions for the healthcare industry, including electronic health records (EHR) systems, telehealth platforms, and data analytics to improve patient care and operational efficiency.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Financial Services</h3>
+        <p>Our secure and scalable IT solutions for the financial services industry focus on regulatory compliance, risk management, data security, and enhancing customer engagement through digital platforms.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Manufacturing</h3>
+        <p>We optimize manufacturing processes through IoT-enabled solutions, enterprise resource planning (ERP) systems, and data analytics to enhance productivity, reduce costs, and improve supply chain management.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Retail</h3>
+        <p>We empower retail businesses with e-commerce solutions, inventory management systems, and customer analytics to enhance the shopping experience, streamline operations, and boost sales.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Technology</h3>
+        <p>For technology companies, we offer expertise in custom software development, cloud infrastructure optimization, and cybersecurity, helping them accelerate innovation and maintain a competitive edge.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Telecommunications</h3>
+        <p>We provide solutions for the telecommunications sector, including network optimization, data management, and customer relationship management (CRM) systems to improve service delivery and operational efficiency.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Travel, Transport, Logistics & Hospitality</h3>
+        <p>Our IT solutions for the travel, transport, logistics, and hospitality industries focus on optimizing booking systems, supply chain management, and enhancing customer experiences through digital platforms.</p>
+      </div>
+
+      <div class="industry-content">
+        <h3>Education</h3>
+        <p>We support educational institutions with learning management systems (LMS), student information systems (SIS), and secure data solutions to enhance learning environments and administrative efficiency.</p>
+      </div>
+
+    </div>
+    <p style="text-align: center; font-size: 16px; margin-top: 30px;">At IHFL IT Services LTD, your success is our priority. Let us help you harness the power of technology to transform your business and achieve your strategic objectives. Contact us today to discuss how we can partner for your digital future.</p>
+
+    <div class="content-block">
+      <img src="images/team.png" alt="Our Team">
+      <div class="content-text">
+        
+        <p>Founded in 2020, IHFL IT Services LTD has rapidly grown into a dynamic and forward-thinking IT services company dedicated to empowering businesses through technology. Our mission is to deliver cutting-edge, reliable, and customized IT solutions that drive growth, enhance efficiency, and foster digital transformation. We pride ourselves on a client-centric approach, ensuring that every solution we develop is perfectly aligned with your unique business objectives and challenges.</p>
+        <p>Our journey began with a vision to bridge the gap between complex technological demands and accessible, high-quality IT services. We have consistently invested in top-tier talent and advanced methodologies to ensure that our clients receive nothing but the best. From startups to large enterprises, we tailor our expertise to fit your scale and ambition, helping you navigate the digital landscape with confidence.</p>
+      </div>
+    </div>
+
+    <h3>Who We Are: Pioneers in Digital Transformation</h3>
+    <p>At IHFL IT Services LTD, we believe technology is the backbone of modern business success. Our team comprises highly passionate and skilled IT professionals, bringing together diverse expertise in areas such as full-stack software development, advanced cloud computing, robust cybersecurity frameworks, insightful IT consulting, and comprehensive managed services. We are not just service providers; we are strategic partners committed to understanding the intricacies of your business to craft tailored strategies that deliver measurable, impactful results and sustainable growth.</p>
+    <p>Our collaborative environment encourages continuous learning and innovation, ensuring we stay at the forefront of technological advancements. We invest in our people, providing them with the tools and knowledge to excel and contribute meaningfully to your success. We foster a culture of continuous improvement, where every project is an opportunity to learn, grow, and set new benchmarks in excellence.</p>
+
+    <h3>Our Vision: Leading the Future of IT</h3>
+    <p>To be a globally recognized leader in IT services, distinguished by our relentless pursuit of innovation, unwavering commitment to quality, and deeply customer-centric solutions. We envision a future where businesses of all sizes can seamlessly leverage technology to achieve their full potential, thrive in an ever-evolving digital landscape, and contribute to a more connected and efficient world. Our vision extends beyond just providing services; it's about shaping the digital future alongside our clients.</p>
+
+    <h3>Our Mission: Empowering Your Digital Journey</h3>
+    <ul>
+      <li>Deliver exceptional IT services that consistently meet and exceed client expectations, fostering long-term partnerships built on trust, transparency, and mutual growth.</li>
+      <li>Continuously innovate and adapt to stay ahead of industry trends and technological advancements, ensuring our clients always have access to cutting-edge solutions.</li>
+      <li>Empower businesses with scalable, secure, and resilient IT infrastructure and applications that drive operational efficiency and competitive advantage.</li>
+      <li>Foster a culture of excellence, integrity, and continuous improvement within our teams, enabling them to deliver the highest quality of service and support.</li>
+      <li>Contribute positively to the global tech community by sharing knowledge, fostering talent, and embracing ethical practices in all our endeavors.</li>
+    </ul>
+
+    <h3>Why Choose IHFL IT Services LTD? Your Success, Our Priority</h3>
+    <ul>
+      <li><strong>Experienced and Expert Team:</strong> Benefit from a diverse pool of highly skilled professionals with extensive experience across various IT domains, ready to tackle any challenge with precision and expertise.</li>
+      <li><strong>Customer-Centric Approach:</strong> We prioritize understanding your unique business goals and challenges to deliver personalized solutions that truly align with your strategic vision, ensuring maximum ROI.</li>
+      <li><strong>Agile and Adaptive Methodology:</strong> Our flexible and adaptive methodologies ensure we can quickly respond to changing market needs and project requirements, delivering results efficiently and effectively.</li>
+      <li><strong>Uncompromised Quality Assurance:</strong> We are committed to excellence and adhere to the highest industry best practices, ensuring robust, reliable, and high-performing solutions that stand the test of time.</li>
+      <li><strong>Comprehensive End-to-End Services:</strong> From initial strategic consultation and meticulous planning to seamless implementation, deployment, and ongoing technical support, we cover your entire IT journey, providing a single point of contact for all your needs.</li>
+    </ul>
+    <p>Our commitment to your success is unwavering. We build lasting relationships based on trust and mutual respect, always striving to be more than just a vendor – we aim to be a true extension of your team.</p>
+
+    <h3>Our Comprehensive Services: Driving Your Business Forward</h3>
+    <p>IHFL IT Services LTD offers a full spectrum of IT solutions designed to propel your business forward in the digital age. Our services are crafted to address the most critical technological needs of modern enterprises, ensuring efficiency, security, and innovation.</p>
+    <ul>
+      <li><strong>Custom Software Development:</strong> Building bespoke applications tailored precisely to your operational needs, enhancing efficiency, streamlining workflows, and giving you a significant competitive edge.</li>
+      <li><strong>Cloud Solutions & Migration:</strong> Expert guidance and seamless implementation for cloud adoption, migration, and optimization across leading platforms like AWS, Azure, and Google Cloud, ensuring scalability and cost-efficiency.</li>
+      <li><strong>IT Infrastructure Management:</strong> Proactive management and optimization of your entire IT infrastructure, ensuring maximum uptime, robust performance, and future-proof scalability.</li>
+      <li><strong>Cybersecurity & Risk Management:</strong> Implementing cutting-edge security solutions and comprehensive strategies to protect your critical data and assets from evolving cyber threats, ensuring compliance and peace of mind.</li>
+      <li><strong>IT Consulting & Strategy:</strong> Strategic IT advisory services to help you make informed technology decisions, optimize existing processes, and plan for future growth and digital transformation initiatives.</li>
+      <li><strong>Technical Support & Maintenance:</strong> Reliable 24/7 technical support and ongoing maintenance to ensure your systems run smoothly, efficiently, and with minimal downtime.</li>
+    </ul>
+    <p>We are dedicated to being your strategic IT partner, providing the expertise and support you need to navigate the complexities of technology and achieve your business objectives.</p>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 IHFL IT SERVICES LTD. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>

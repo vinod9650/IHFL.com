@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services – IHFL IT SERVICES LTD.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Navigation styles */
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    /* Active link styling */
+    nav ul li a.active {
+      background: #113c5c;
+      border-radius: 5px;
+    }
+
+    /* Logo styles */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-container img {
+      height: 40px;
+    }
+
+    .logo-container h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: normal;
+      color: white;
+    }
+
+    /* Main content styles */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #1f2e3d;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #0a2540;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    h1::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #00b0ff;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        color: #1f2e3d;
+        font-size: 16px;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+      list-style: disc;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #1f2e3d;
+    }
+
+    ul li strong {
+        color: #0a2540;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-image {
+      display: block;
+      max-width: 100%;
+      width: 300px;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease-in-out;
+      transform-style: preserve-3d;
+    }
+
+    .section-image:hover {
+      transform: rotateY(30deg);
+    }
+
+    footer {
+      background: #0a2540;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #90caf9;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .copyright {
+      color: #00b0ff; /* New color for copyright text */
+      font-weight: bold;
+    }
+
+    a {
+      color: #00b0ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #008cff;
+      text-decoration: none;
+    }
+
+    .get-in-touch-btn {
+      display: inline-block;
+      background: #00b0ff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .get-in-touch-btn:hover {
+      background: #008cff;
+    }
+
+    /* Services & Industries section styles */
+    .services-industries {
+      padding: 20px 10px;
+      background: #FFFFFF;
+      color: Black;
+      position: relative;
+    }
+
+    .services-industries h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .services-industries-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-left: 20px;
+    }
+
+    .services-industries-column {
+      flex: 1 1 300px;
+    }
+
+    .services-industries-column h3 {
+      color: #90caf9;
+    }
+
+    .services-industries-column ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+      }
+      
+      nav ul li {
+        margin-left: 0;
+      }
+      
+      .container {
+        margin: 20px auto;
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+      
+      h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+      
+      h3 {
+        font-size: 22px;
+        margin-top: 25px;
+      }
+      
+      .section-image {
+        width: 80%;
+        margin: 15px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="IHFL Logo">
+      <h2>IHFL IT SERVICES LTD.</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Our Services</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="Careers.html">Careers</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+<h1 style="text-align: center;">
+  <span style="background-color:#7DF9FF; padding: 5px 10px; border-radius: 5px; display: inline-block;">
+   Our Services
+  </span>
+</h1>
+    
+    <h2>Empowering Businesses Through Innovative Technology</h2>
+    <p>At IHFL IT Services LTD, we offer a comprehensive suite of services designed to empower businesses through innovative technology and expert guidance. Our solutions span automotive design and software, app development, and a broad range of IT consulting services tailored to meet the demands of today's fast-evolving digital landscape. We are committed to delivering excellence and driving tangible value for our clients across various industries.</p>
+   
+    <div style="text-align: center;">
+      <img src="images/Robo hand.png" alt="Our Services" class="section-image" style="width: 80%;">
+    </div>
+    
+    <p>Our approach is rooted in understanding your unique challenges and opportunities. We leverage cutting-edge technologies and best practices to craft solutions that are not only effective but also scalable and sustainable for your future growth. Partner with us to transform your vision into reality.</p>
+
+    <div class="section">
+      <h3>🚗 Automotive Design and Software Solutions</h3>
+      <p>Driving innovation in the automotive sector, our team specializes in creating robust and intelligent solutions for the modern vehicle. We combine deep industry knowledge with technical prowess to deliver components that enhance performance, safety, and connectivity.</p>
+      
+      <div style="text-align: center;">
+        <img src="images/Car.png" alt="Automotive Solutions" class="section-image" style="width: 80%;">
+      </div>
+      
+      <ul>
+        <li><strong>Automotive Design:</strong> Utilizing advanced CAD tools and engineering expertise, we create detailed 3D models and simulations to develop high-performance, safe, and efficient vehicle components and systems. Our design process focuses on precision, aesthetics, and functionality, ensuring your automotive products stand out in a competitive market.</li>
+        <li><strong>Automotive Software:</strong> We develop embedded systems, ADAS (Advanced Driver-Assistance Systems), infotainment, telematics, and connected car applications that comply with stringent industry standards and integrate the latest technologies for enhanced vehicle intelligence and safety. Our software solutions are designed for reliability and seamless integration.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📱 App Development Solutions</h3>
+      <p>In today's mobile-first world, a powerful application is crucial for business success. We deliver custom mobile and web applications meticulously crafted to enhance user experience and boost business productivity. Our agile development approach ensures that your app is not only high-performing but also scalable, secure, and perfectly tailored to your unique needs and target audience.</p>
+     
+      <div style="text-align: center;">
+        <img src="images/mobile.png" alt="App Development" class="section-image" style="width: 80%;">
+      </div>
+      
+      <p>From intuitive UI/UX design to robust backend development and seamless deployment, we manage the entire app development lifecycle. Whether you need a consumer-facing mobile app or a complex enterprise web application, we build solutions that drive engagement and deliver measurable results.</p>
+    </div>
+
+    <div class="section">
+      <h3>💡 IT Consulting Services</h3>
+      <p>Navigate the complexities of the digital landscape with our expert IT consulting services. We provide strategic guidance and practical solutions to optimize your IT infrastructure, enhance operational efficiency, and drive digital transformation across your organization.</p>
+      
+      <div style="text-align: center;">
+        <img src="images/IT consulting.png" alt="IT Consulting" class="section-image" style="width: 80%;">
+      </div>
+      
+      <ul>
+        <li><strong>AI Integration and Automation:</strong> Implementing AI-driven tools and machine learning models to automate repetitive processes, enhance decision-making capabilities, and improve operational efficiency across various business functions.</li>
+        <li><strong>Cloud Solutions & Hybrid Cloud Orchestration:</strong> Designing, implementing, and managing scalable cloud infrastructures, including hybrid environments that seamlessly combine public cloud, private cloud, and edge computing for optimal flexibility and cost-effectiveness.</li>
+        <li><strong>Cybersecurity and Risk Management:</strong> Developing robust security frameworks, advanced threat detection systems, and comprehensive compliance strategies to protect your valuable digital assets from evolving cyber threats and ensure business continuity.</li>
+        <li><strong>Data Analytics and Business Intelligence:</strong> Deploying powerful analytics platforms and business intelligence tools that transform raw data into actionable insights, enabling smarter business decisions, accurate forecasting, and competitive advantage.</li>
+        <li><strong>IT Strategy & Digital Transformation:</strong> Crafting adaptive and forward-thinking roadmaps to align your IT investments with overarching business goals, ensuring long-term agility, innovation, and sustainable growth in the digital era.</li>
+        <li><strong>Consulting-as-a-Service (CaaS):</strong> Offering flexible, on-demand subscription-based access to our expert IT consulting services, providing you with specialized knowledge and strategic guidance without the burden of long-term contracts.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🔍 Why Choose IHFL IT Services LTD?</h3>
+      <p>Choosing IHFL IT Services LTD means partnering with a team dedicated to your success. Our unique blend of expertise, client-focused approach, and commitment to innovation sets us apart.</p>
+     
+      <div style="text-align: center;">
+        <img src="images/why choose us.png" alt="Why Choose Us" class="section-image" style="width: 80%;">
+      </div>
+      
+      <ul>
+        <li>Deep expertise in both automotive and core IT domains, providing a unique advantage for clients in specialized industries.</li>
+        <li>Customized, client-focused solutions designed precisely around real business needs, ensuring maximum relevance and impact.</li>
+        <li>Proactive adoption of emerging technologies including AI, edge computing, and hybrid cloud, keeping your business at the forefront of innovation.</li>
+        <li>Agile methodologies ensuring fast, adaptive, and high-quality delivery of projects, minimizing risks and maximizing efficiency.</li>
+        <li>Unwavering commitment to data security, industry compliance, and continuous innovation, safeguarding your assets and future-proofing your operations.</li>
+      </ul>
+      
+      <p><strong>Partner with IHFL IT Services LTD to harness technology that drives growth, efficiency, and future readiness in your business. Let's build your digital future together.</strong></p>
+      
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="Contact Us.html" class="get-in-touch-btn">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Added Services & Industries section from index.html -->
+  <section class="services-industries">
+    <h2>Services & Industries We Cover</h2>
+    
+    <div class="services-industries-container">
+      <!-- Services Column -->
+      <div class="services-industries-column">
+        <h3>Services</h3>
+        <ul>
+          <li>Application Services</li>
+          <li>Automation</li>
+          <li>Business Process Operations</li>
+          <li>Commercial Apps / SaaS</li>
+          <li>Cybersecurity</li>
+          <li>Data and AI</li>
+          <li>Digital Design and Manufacturing Services</li>
+          <li>Digital Engineering</li>
+          <li>Digital Workplace</li>
+          <li>EdTech</li>
+          <li>Global Capability Center (GCC)</li>
+          <li>Intelligent Operations</li>
+          <li>Internet of Things (IoT)</li>
+          <li>Marketing Services</li>
+          <li>Networks</li>
+          <li>Operational Technology</li>
+          <li>Product Engineering</li>
+          <li>Supply Chain</li>
+          <li>Unified Service Management (USM)</li>
+        </ul>
+      </div>
+      
+      <!-- Industries Column -->
+      <div class="services-industries-column">
+        <h3>Industries</h3>
+        <ul>
+          <li>Aerospace and Defense</li>
+          <li>Automotive</li>
+          <li>Consumer Goods</li>
+          <li>Energy and Utilities</li>
+          <li>Life Sciences and Healthcare</li>
+          <li>Manufacturing</li>
+          <li>Mining and Natural Resources</li>
+          <li>Oil and Gas</li>
+          <li>Public Sector</li>
+          <li>Retail</li>
+          <li>Technology</li>
+          <li>Telecom Media and Entertainment Services</li>
+          <li>Travel, Transport, Logistics & Hospitality</li>
+          <li>Financial Services</li>
+          <li>Banking</li>
+          <li>Capital Markets</li>
+          <li>Financial Crime Compliance and Risk</li>
+          <li>Fintech</li>
+          <li>Insurance</li>
+        </ul>
+      </div>
+
+      <!-- Links Column -->
+      <div class="services-industries-column">
+        <h3>Quick Links</h3>
+        <ul style="line-height: 2;">
+          <li><a href="openings.html">Current Openings</a></li>
+          <li><a href="life-at-ihfl.html">Life at IHFL</a></li>
+          <li><a href="presence.html">Our Presence</a></li>
+          <li><a href="policy.html">Our Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="copyright">© 2025 IHFL IT SERVICES LTD. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>

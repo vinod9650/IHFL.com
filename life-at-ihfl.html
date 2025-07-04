@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Life at IHFL - IHFL IT SERVICES LTD.</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #1f2e3d;
+    }
+    header {
+      background-color: #0a2540;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-container img {
+      height: 40px;
+    }
+    .back-to-home {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .back-to-home:hover {
+      background: white;
+      color: #0a2540;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a2540;
+    }
+    .culture-section {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+    .culture-section h2 {
+      color: #00b0ff;
+      margin-top: 0;
+      border-bottom: 2px solid #f0f4f8;
+      padding-bottom: 10px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .benefit-card {
+      background: #f0f4f8;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    .benefit-card h3 {
+      color: #0a2540;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      background: #0a2540;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="IHFL Logo">
+      <h2>IHFL IT SERVICES LTD.</h2>
+    </div>
+    <a href="index.html" class="back-to-home">← Back to Home</a>
+  </header>
+
+  <div class="container">
+    <h1>🌟 Life at IHFL</h1>
+
+    <div class="culture-section">
+      <h2>A Culture of Collaboration and Innovation</h2>
+      <p>At IHFL, we believe in fostering an environment where ideas flourish and collaboration is key. Our teams work closely, sharing knowledge and expertise to tackle complex challenges and deliver groundbreaking solutions. We encourage open communication and a flat hierarchy, ensuring every voice is heard and valued. From brainstorming sessions to hackathons, innovation is at the heart of everything we do.</p>
+      <p>We celebrate diversity and inclusion, understanding that a variety of perspectives leads to richer insights and more creative outcomes. Our vibrant workplace is designed to inspire, with modern facilities and spaces that promote both focused work and spontaneous interactions.</p>
+      
+      <div class="gallery">
+        <img src="images/culture1.jpg" alt="Team collaboration">
+        <img src="images/culture2.jpg" alt="Office space">
+        <img src="images/culture3.jpg" alt="Team meeting">
+      </div>
+    </div>
+
+    <div class="culture-section">
+      <h2>Investing in Our People: Growth and Well-being</h2>
+      <p>We are committed to the professional and personal growth of our employees. IHFL offers extensive learning and development programs, including workshops, certifications, and mentorship opportunities, to help you stay ahead in the fast-evolving tech landscape. Your career path here is dynamic, with ample opportunities for advancement and cross-functional exposure.</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Learning & Development</h3>
+          <p>Access to premium courses, certifications, and mentorship programs to fuel your professional growth.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Health & Wellness</h3>
+          <p>Comprehensive medical coverage, mental health support, and fitness programs.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Flexible Work</h3>
+          <p>Hybrid work models and flexible hours to support work-life balance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="culture-section">
+      <h2>Beyond Work: Fun, Engagement, and Community</h2>
+      <p>Life at IHFL isn't just about work; it's about building connections and creating memorable experiences. We organize regular team-building events, social gatherings, and festive celebrations throughout the year. From sports tournaments to cultural events and volunteer initiatives, there's always something exciting happening.</p>
+      <p>We also encourage our employees to give back to the community through various CSR activities. Joining IHFL means becoming part of a family that supports each other, learns together, and celebrates successes, both big and small.</p>
+      
+      <div class="gallery">
+        <img src="images/event1.jpg" alt="Team outing">
+        <img src="images/event2.jpg" alt="Hackathon">
+        <img src="images/event3.jpg" alt="Festival celebration">
+        <img src="images/csr1.jpg" alt="CSR activity">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 IHFL IT SERVICES LTD. All rights reserved.
+  </footer>
+</body>
+</html>
